@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+	<cpn>
+		<template v-slot:first>我替换了第一个</template>
+		<template >我替换了第3个</template>
+		<template v-slot:second="slotObj" >{{slotObj.data}}</template>
+	</cpn>
+	</div>
+	<div id="app2">
+		
+	</div>
+	<template id='t1'>
+		<p href="">
+			<slot name="first">我是默认的内容，如果使用组件的时候，不加，则出现我1</slot>
+			<br>
+			<slot name='second' v-bind:data="str">我是默认的内容，如果使用组件的时候，不加，则出现我2</slot>
+			<br>
+			<slot>我是默认的内容，如果使用组件的时候，不加，则出现我3</slot>
+		</p>
+	</template>
+	<script>
+
+		let cpn = {
+			template:'#t1',
+			data(){
+				return {
+					str:'我是定义在子组件data里面的数据!!'
+				}
+			}
+		}
+		let app = new Vue({
+			el:'#app',
+			components:{
+				cpn
+			}
+		})
+
+	</script>
+</body>
+</html>

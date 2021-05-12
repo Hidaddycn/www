@@ -1,0 +1,102 @@
+@import "./normalize.css";
+
+/*@font-face {
+  font-family: 'MyWebFont';
+  src: url('myfont.woff') format('woff'); 
+}*/
+
+:root{
+    --normal-font-size:14px;
+    --h1-font-size:2em;
+    --h2-font-size:1.8em;
+    --h3-font-size:1.6em;
+    --h4-font-size:1.4em;
+    --h5-font-size:1.2em;
+    --h6-font-size:1.1em;
+    --span-font-size:1em;
+    --em-font-size:1em;
+    --strong-font-size:1em;
+    --i-font-size:1em;
+    
+    /*  定义文字颜色  */
+
+    --main-text-color:rgba(0,0,0,1);
+    --base-text-color:rgba(228,49,49,1);
+    --link-text-color:rgba(0,0,0,1);
+   
+    --visited-text-color:rgba(22,22,22,1);
+    
+    --hover-text-color:rgba(99,99,99,1);
+    
+    --active-text-color:rgba(0,0,0,1);
+   
+    --link-text-size:14px;
+
+}
+
+
+body{
+    /*font-family:'MyWebFont';*/
+    color:var(--main-text-color);
+    font-size:var(--normal-font-size);
+} 
+
+
+h1{
+    
+    font-size:var(--h1-font-size);
+}
+h2{
+    
+    font-size:var(--h2-font-size);
+}
+h3{
+    
+    font-size:var(--h3-font-size);
+}
+h4{
+    
+    font-size:var(--h4-font-size);
+}
+h5{
+    
+    font-size:var(--h5-font-size);
+}
+h6{
+    
+    font-size:var(--h6-font-size);
+}
+span{
+    font-size:var(--span-font-size);
+}
+em{
+    font-size:var(--em-font-size);
+}
+strong{
+    font-size:var(--strong-font-size);
+}
+i{
+    font-size:var(--i-font-size);
+}  
+
+
+a{
+    text-decoration:none;
+    font-size:var(--link-text-size);
+    color:var(--link-text-color) ; 
+ }
+
+/*a:link{
+  color:var(--link-text-color) ; 
+}*/
+
+/*a:visited{
+    color:var(--visited-text-color) ; 
+}*/
+
+/*a:hover{
+    color:var(--hover-text-color) ; 
+}
+a:active{
+    color:var(--active-text-color) ; 
+}*/
